@@ -56,11 +56,11 @@ export function ProjectionChart({ data }: Props) {
         </div>
         <div className="flex items-center gap-3 text-xs">
           <span className="flex items-center gap-1.5">
-            <span className="w-3 h-0.5 bg-indigo-400 rounded inline-block" />
+            <span className="w-3 h-0.5 bg-emerald-400 rounded inline-block" />
             <span className="text-slate-400">Annual</span>
           </span>
           <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-indigo-500/30 inline-block" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500/30 inline-block" />
             <span className="text-slate-400">Savings area</span>
           </span>
         </div>
@@ -70,8 +70,8 @@ export function ProjectionChart({ data }: Props) {
         <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="premiumGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#6366f1" stopOpacity={0.25} />
-              <stop offset="95%" stopColor="#6366f1" stopOpacity={0.02} />
+              <stop offset="5%" stopColor="#10b981" stopOpacity={0.25} />
+              <stop offset="95%" stopColor="#10b981" stopOpacity={0.02} />
             </linearGradient>
           </defs>
           <CartesianGrid
@@ -92,21 +92,21 @@ export function ProjectionChart({ data }: Props) {
             tickLine={false}
             width={36}
           />
-          <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(99,102,241,0.3)', strokeWidth: 1 }} />
+          <Tooltip content={<CustomTooltip />} cursor={{ stroke: 'rgba(16,185,129,0.3)', strokeWidth: 1 }} />
           <ReferenceLine
             x={currentYear}
-            stroke="rgba(99,102,241,0.5)"
+            stroke="rgba(16,185,129,0.5)"
             strokeDasharray="4 4"
-            label={{ value: 'Today', fill: '#818cf8', fontSize: 10, position: 'insideTopRight' }}
+            label={{ value: 'Today', fill: '#34d399', fontSize: 10, position: 'insideTopRight' }}
           />
           <Area
             type="monotone"
             dataKey="annual"
-            stroke="#6366f1"
+            stroke="#10b981"
             strokeWidth={2}
             fill="url(#premiumGrad)"
-            dot={{ fill: '#6366f1', r: 3, strokeWidth: 0 }}
-            activeDot={{ r: 5, fill: '#818cf8', strokeWidth: 0 }}
+            dot={{ fill: '#10b981', r: 3, strokeWidth: 0 }}
+            activeDot={{ r: 5, fill: '#34d399', strokeWidth: 0 }}
             animationDuration={900}
             animationEasing="ease-out"
           />

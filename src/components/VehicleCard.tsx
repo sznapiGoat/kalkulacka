@@ -39,7 +39,7 @@ export function VehicleCard({ vehicle, selected, onSelect }: Props) {
         <motion.div
           animate={{ scale: selected ? 1 : 0, opacity: selected ? 1 : 0 }}
           transition={{ type: 'spring', stiffness: 400, damping: 28 }}
-          className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-500 flex items-center justify-center"
+          className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center"
         >
           <Check size={11} className="text-white" strokeWidth={3} />
         </motion.div>
@@ -59,7 +59,7 @@ function Stat({ label, value, highlight }: { label: string; value: string; highl
   return (
     <div>
       <p className="label-text mb-0.5">{label}</p>
-      <p className={`text-sm font-medium ${highlight ? 'text-indigo-300' : 'text-slate-200'}`}>{value}</p>
+      <p className={`text-sm font-medium ${highlight ? 'text-emerald-300' : 'text-slate-200'}`}>{value}</p>
     </div>
   );
 }

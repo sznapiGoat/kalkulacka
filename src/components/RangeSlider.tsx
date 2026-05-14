@@ -24,8 +24,8 @@ export function RangeSlider({ label, value, min, max, step = 1, unit, formatValu
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <p className="label-text">{label}</p>
-        <div className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/25">
-          <span className="text-sm font-semibold text-indigo-300 font-mono tabular-nums">{display}</span>
+        <div className="px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/25">
+          <span className="text-sm font-semibold text-emerald-300 font-mono tabular-nums">{display}</span>
         </div>
       </div>
       <input

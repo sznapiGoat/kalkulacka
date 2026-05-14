@@ -19,14 +19,14 @@ export function AddonCheckbox({ option, checked, onChange }: Props) {
       className={[
         'flex items-center gap-3 w-full p-3 rounded-lg transition-colors duration-150 cursor-pointer text-left',
         checked
-          ? 'bg-indigo-500/10 border border-indigo-500/30'
+          ? 'bg-emerald-500/10 border border-emerald-500/30'
           : 'bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05]',
       ].join(' ')}
     >
       <motion.div
         animate={{
-          backgroundColor: checked ? '#6366f1' : 'rgba(255,255,255,0.07)',
-          borderColor: checked ? '#6366f1' : 'rgba(255,255,255,0.15)',
+          backgroundColor: checked ? '#10b981' : 'rgba(255,255,255,0.07)',
+          borderColor: checked ? '#10b981' : 'rgba(255,255,255,0.15)',
         }}
         transition={{ duration: 0.18 }}
         className="flex-shrink-0 w-5 h-5 rounded-md border flex items-center justify-center"
@@ -42,7 +42,7 @@ export function AddonCheckbox({ option, checked, onChange }: Props) {
         <p className={`text-sm font-medium ${checked ? 'text-white' : 'text-slate-300'}`}>{option.label}</p>
         <p className="text-xs text-slate-500 mt-0.5">{option.description}</p>
       </div>
-      <span className={`text-xs font-mono font-medium flex-shrink-0 ${checked ? 'text-indigo-300' : 'text-slate-500'}`}>
+      <span className={`text-xs font-mono font-medium flex-shrink-0 ${checked ? 'text-emerald-300' : 'text-slate-500'}`}>
         +{czk.format(option.annualCost)}/yr
       </span>
     </motion.button>

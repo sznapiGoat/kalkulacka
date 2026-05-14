@@ -29,14 +29,13 @@ export default function App() {
     <div
       className="min-h-screen"
       style={{
-        backgroundImage:
-          'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-        backgroundSize: '48px 48px',
+        backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
       }}
     >
       {/* Ambient glow blobs */}
-      <div className="fixed top-0 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="fixed bottom-1/4 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="fixed top-0 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="fixed bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 lg:px-8">
         {/* ── Hero ────────────────────────────────────────── */}
@@ -46,8 +45,8 @@ export default function App() {
           animate="visible"
           className="text-center mb-14"
         >
-          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs text-indigo-400 font-medium mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
+          <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400 font-medium mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Czech Market · AIS Servis Compatible
           </motion.div>
           <motion.h1
@@ -135,7 +134,7 @@ export default function App() {
             {/* Effective rate badge */}
             <div className="glass-card px-4 py-3 flex items-center justify-between">
               <span className="label-text">Effective annual rate</span>
-              <span className="text-sm font-semibold font-mono text-indigo-300">
+              <span className="text-sm font-semibold font-mono text-emerald-300">
                 {((result.breakdown.totalAnnual / vehicle.value) * 100).toFixed(2)}%
               </span>
             </div>
