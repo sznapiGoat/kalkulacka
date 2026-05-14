@@ -46,10 +46,10 @@ export function VehicleCard({ vehicle, selected, onSelect }: Props) {
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-2">
-        <Stat label="Engine" value={vehicle.engine} />
-        <Stat label="Body" value={vehicle.bodyType} />
-        <Stat label="Year" value={String(vehicle.year)} />
-        <Stat label="Value" value={czk.format(vehicle.value)} highlight />
+        <Stat label="Motor" value={vehicle.engine} />
+        <Stat label="Karoserie" value={vehicle.bodyType} />
+        <Stat label="Rok" value={String(vehicle.year)} />
+        <Stat label="Hodnota" value={czk.format(vehicle.value)} highlight />
       </div>
     </motion.button>
   );

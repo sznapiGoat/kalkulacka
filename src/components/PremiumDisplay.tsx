@@ -22,20 +22,20 @@ export function PremiumDisplay({ breakdown }: Props) {
     <motion.div variants={fadeInUp} className="glass-card p-6 space-y-6">
       {/* Main price */}
       <div>
-        <p className="label-text mb-2">Monthly premium</p>
+        <p className="label-text mb-2">Měsíční pojistné</p>
         <div className="flex items-end gap-3">
           <AnimatedNumber
             value={breakdown.totalMonthly}
             className="text-5xl font-bold tracking-tight gradient-text font-mono tabular-nums"
           />
-          <span className="text-slate-400 text-lg mb-1">/mo</span>
+          <span className="text-slate-400 text-lg mb-1">/měs.</span>
         </div>
         <div className="flex items-center gap-2 mt-1.5">
           <AnimatedNumber
             value={breakdown.totalAnnual}
             className="text-slate-400 text-base font-mono tabular-nums"
           />
-          <span className="text-slate-600 text-sm">per year</span>
+          <span className="text-slate-600 text-sm">ročně</span>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ export function PremiumDisplay({ breakdown }: Props) {
 
       {/* Breakdown */}
       <div>
-        <p className="label-text mb-3">Breakdown</p>
+        <p className="label-text mb-3">Rozpis pojistného</p>
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -51,14 +51,14 @@ export function PremiumDisplay({ breakdown }: Props) {
           className="space-y-2"
         >
           <BreakdownRow
-            label="Base premium"
+            label="Základní pojistné"
             value={breakdown.baseAnnual}
             sign="+"
             color="text-slate-300"
           />
           {breakdown.ageLoading !== 0 && (
             <BreakdownRow
-              label="Age loading"
+              label="Přirážka za věk"
               value={breakdown.ageLoading}
               sign="+"
               color="text-orange-400"
@@ -66,7 +66,7 @@ export function PremiumDisplay({ breakdown }: Props) {
           )}
           {breakdown.noClaimDiscount > 0 && (
             <BreakdownRow
-              label="No-claim discount"
+              label="Bonus za bezeškodní průběh"
               value={breakdown.noClaimDiscount}
               sign="−"
               color="text-emerald-400"
@@ -74,7 +74,7 @@ export function PremiumDisplay({ breakdown }: Props) {
           )}
           {breakdown.addonsCost > 0 && (
             <BreakdownRow
-              label="Add-ons"
+              label="Připojištění"
               value={breakdown.addonsCost}
               sign="+"
               color="text-sky-400"
@@ -82,7 +82,7 @@ export function PremiumDisplay({ breakdown }: Props) {
           )}
           <div className="h-px bg-white/[0.06] my-1" />
           <BreakdownRow
-            label="Annual total"
+            label="Celkem ročně"
             value={breakdown.totalAnnual}
             sign=""
             color="text-white"
@@ -108,7 +108,7 @@ export function PremiumDisplay({ breakdown }: Props) {
               className="flex items-center gap-2 text-emerald-400"
             >
               <Check size={14} />
-              Link copied!
+              Odkaz zkopírován!
             </motion.span>
           ) : (
             <motion.span
@@ -119,7 +119,7 @@ export function PremiumDisplay({ breakdown }: Props) {
               className="flex items-center gap-2"
             >
               <Link size={14} />
-              Share this configuration
+              Sdílet konfiguraci
             </motion.span>
           )}
         </AnimatePresence>

@@ -47,16 +47,16 @@ export default function App() {
         >
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-400 font-medium mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Czech Market · AIS Servis Compatible
+            Český trh · AIS Servis kompatibilní
           </motion.div>
           <motion.h1
             variants={fadeInUp}
             className="text-4xl lg:text-5xl font-bold tracking-tight gradient-text mb-3"
           >
-            Car Insurance Calculator
+            Kalkulátor pojištění vozidel
           </motion.h1>
           <motion.p variants={fadeInUp} className="text-slate-400 text-lg max-w-xl mx-auto">
-            Precision premium estimates for Czech market vehicles — instant, transparent, shareable.
+            Přesné odhady pojistného pro vozidla na českém trhu — okamžitě, transparentně, sdílitelně.
           </motion.p>
         </motion.header>
 
@@ -70,7 +70,7 @@ export default function App() {
           {/* LEFT PANEL ── Inputs */}
           <motion.div variants={fadeInLeft} className="space-y-5">
             {/* Vehicle selection */}
-            <Section label="Select vehicle">
+            <Section label="Výběr vozidla">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {VEHICLES.map((v) => (
                   <VehicleCard
@@ -84,7 +84,7 @@ export default function App() {
             </Section>
 
             {/* Coverage type */}
-            <Section label="Coverage type">
+            <Section label="Typ pojištění">
               <CoverageToggle
                 options={COVERAGE_OPTIONS}
                 value={form.coverageType}
@@ -93,29 +93,29 @@ export default function App() {
             </Section>
 
             {/* Sliders */}
-            <Section label="Driver profile">
+            <Section label="Profil řidiče">
               <div className="space-y-6">
                 <RangeSlider
-                  label="Driver age"
+                  label="Věk řidiče"
                   value={form.driverAge}
                   min={18}
                   max={80}
-                  unit="yrs"
+                  unit="let"
                   onChange={(driverAge) => setForm({ driverAge })}
                 />
                 <RangeSlider
-                  label="No-claim years (bonus)"
+                  label="Roky bezeškodního průběhu"
                   value={form.noClaimYears}
                   min={0}
                   max={10}
-                  unit="yrs"
+                  unit="let"
                   onChange={(noClaimYears) => setForm({ noClaimYears })}
                 />
               </div>
             </Section>
 
             {/* Add-ons */}
-            <Section label="Optional add-ons">
+            <Section label="Volitelná připojištění">
               <div className="space-y-2">
                 {ADDON_OPTIONS.map((opt) => (
                   <AddonCheckbox
@@ -133,7 +133,7 @@ export default function App() {
           <motion.div variants={fadeInRight} className="space-y-5 lg:sticky lg:top-8 self-start">
             {/* Effective rate badge */}
             <div className="glass-card px-4 py-3 flex items-center justify-between">
-              <span className="label-text">Effective annual rate</span>
+              <span className="label-text">Efektivní roční sazba</span>
               <span className="text-sm font-semibold font-mono text-emerald-300">
                 {((result.breakdown.totalAnnual / vehicle.value) * 100).toFixed(2)}%
               </span>
@@ -155,7 +155,7 @@ export default function App() {
           viewport={{ once: true }}
           className="text-center mt-10 text-slate-600 text-xs space-y-1"
         >
-          <p>Estimates only — not binding insurance quotes. Czech market rates as of 2024.</p>
+          <p>Pouze orientační odhady — nejde o závazné pojistné nabídky. Sazby pro český trh k roku 2024.</p>
           <p>Built with React · TypeScript · Motion · Recharts · Tailwind CSS</p>
         </motion.footer>
       </div>

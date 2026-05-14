@@ -4,7 +4,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: 'skoda-superb',
     name: 'Škoda Superb',
-    subtitle: 'IV Generation · 2024',
+    subtitle: 'IV. generace · 2024',
     value: 850_000,
     engine: '2.0 TSI · 150 kW',
     year: 2024,
@@ -15,7 +15,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: 'suzuki-swift',
     name: 'Suzuki Swift',
-    subtitle: 'VI Generation · 2024',
+    subtitle: 'VI. generace · 2024',
     value: 380_000,
     engine: '1.2 DualJet · 83 kW',
     year: 2024,
@@ -37,19 +37,19 @@ export const COVERAGE_OPTIONS: CoverageOption[] = [
     id: 'tpl',
     label: 'TPL',
     labelCz: 'Povinné ručení',
-    description: 'Mandatory 3rd-party liability',
+    description: 'Povinná odpovědnost vůči třetím stranám',
   },
   {
     id: 'comprehensive',
     label: 'CASCO',
     labelCz: 'Havarijní',
-    description: 'Full vehicle protection',
+    description: 'Komplexní ochrana vozidla',
   },
   {
     id: 'full',
     label: 'FULL',
     labelCz: 'Kompletní',
-    description: 'TPL + CASCO bundle',
+    description: 'Kombinace POV a havarijního pojištění',
   },
 ];
 
@@ -63,20 +63,20 @@ export interface AddonOption {
 export const ADDON_OPTIONS: AddonOption[] = [
   {
     id: 'roadside',
-    label: 'Roadside Assist',
-    description: '24/7 emergency support',
+    label: 'Asistenční služba',
+    description: 'Pomoc na silnici 24/7',
     annualCost: 1_800,
   },
   {
     id: 'glass',
-    label: 'Glass Protection',
-    description: 'Windshield & windows',
+    label: 'Pojištění skel',
+    description: 'Čelní sklo a okna',
     annualCost: 2_400,
   },
   {
     id: 'replacement',
-    label: 'Replacement Car',
-    description: 'Loan vehicle during repair',
+    label: 'Náhradní vozidlo',
+    description: 'Půjčené auto po dobu opravy',
     annualCost: 3_600,
   },
 ];
